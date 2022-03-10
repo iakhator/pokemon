@@ -25,19 +25,21 @@ Task require building a web app that shows paginated pokemon and also filter by 
 - query is passed to use as check to use a new url to fetch pokemon by name when the query has a value.
 - The url passed to `useFetcchPokemon has a signature of`<https://pokeapi.co/api/v2/pokemon?offset={offset}&limit>=`16` and the query is passed to the url as `https://pokeapi.co/api/v2/pokemon/{query}`.
 - Requests are made based on the page number and limit which return exactly an array of 16 pokemon at a time and I see this approach to be efficient and optimal because this put into consideration the amount of data that is being fetched if the data is large. I also see that the data is being fetched only when the page number changes.
+- For the details page, I used modal to display the pokemon details. I wanted to make it as simple as possible.
 
 #### Pagination
 
 - The pagination is built using [tui-pagination](https://github.com/nhn/tui.pagination)
 - There is a Pagination component that handles all pagination logic.
 
+## Improvements
+
+- I would like to improve the css for the display details modal.
+
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `npm run build`
 
@@ -46,5 +48,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
