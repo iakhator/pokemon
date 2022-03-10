@@ -1,3 +1,15 @@
+export interface PaginationType {
+  itemsPerPage: number
+  currentPage: number
+  totalItems: number
+  updateCurrentPage: (page: number) => void
+}
+
+export interface PokemonType {
+  name: string
+  imageUrl: string
+}
+
 export interface Types{
   type: {
     name: string
@@ -49,4 +61,15 @@ export interface FetchPokemonType {
 export interface PokemonResult {
   name: string;
   url: string
+}
+
+// props type
+export interface PokemonProps {
+  p: PokemonType;
+  showModal: (name: string) => void;
+}
+
+export interface ModalProps {
+  closeModal: () => void;
+  pokemon: PokemonData[];
 }
